@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqR-o1-wDn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="photoBlender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-VD-1bi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-w4-fd0">
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="97"/>
+                                        <state key="normal" title="Photo 1"/>
+                                        <connections>
+                                            <action selector="disTapPhotoLibrary1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ZE-b7-9KP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEC-dh-IzD">
+                                        <rect key="frame" x="201" y="0.0" width="213" height="97"/>
+                                        <state key="normal" title="Photo 2"/>
+                                        <connections>
+                                            <action selector="didTapPhotoLibrary2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rx-4J-fCB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-tD-8gL">
+                                <rect key="frame" x="20" y="117" width="374" height="322.5"/>
+                                <color key="backgroundColor" red="1" green="0.14221451860000001" blue="0.46596913379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Form">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="USd-gp-XpG" kind="presentation" identifier="photoSegue1" modalPresentationStyle="fullScreen" id="zZR-3y-9sp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljp-hs-DF6">
+                                <rect key="frame" x="20" y="447.5" width="374" height="322.5"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Texture">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="USd-gp-XpG" kind="presentation" identifier="photoSegue2" modalPresentationStyle="fullScreen" id="RyF-fM-ZHW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ljp-hs-DF6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2H7-wR-s80"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uu0-VD-1bi" secondAttribute="trailing" id="Ikn-XN-SAC"/>
+                            <constraint firstItem="uu0-VD-1bi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KbA-6b-aA5"/>
+                            <constraint firstItem="cyc-tD-8gL" firstAttribute="top" secondItem="uu0-VD-1bi" secondAttribute="bottom" constant="20" id="Rfa-io-jC2"/>
+                            <constraint firstItem="cyc-tD-8gL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.36" id="SuX-UX-4JR"/>
+                            <constraint firstItem="cyc-tD-8gL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ydh-0H-hJg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cyc-tD-8gL" secondAttribute="trailing" constant="20" id="fwt-wv-ZxA"/>
+                            <constraint firstItem="cyc-tD-8gL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="gYl-YW-tsY"/>
+                            <constraint firstItem="Ljp-hs-DF6" firstAttribute="top" secondItem="cyc-tD-8gL" secondAttribute="bottom" constant="8" id="gnv-vJ-ZOY"/>
+                            <constraint firstItem="uu0-VD-1bi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iqf-0i-u8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ljp-hs-DF6" secondAttribute="trailing" constant="20" id="rgZ-dT-g6s"/>
+                            <constraint firstItem="Ljp-hs-DF6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.36" id="uth-4u-D1I"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="aRf-FN-lTW"/>
+                    <connections>
+                        <outlet property="firstPhoto" destination="cyc-tD-8gL" id="n14-WE-yhh"/>
+                        <outlet property="secondPhoto" destination="Ljp-hs-DF6" id="tzj-9k-TDb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681.15942028985512" y="75.669642857142847"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="4gL-k0-equ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Camera" id="USd-gp-XpG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VEm-rg-8Sl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o9d-P4-Zth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1395" y="263"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EGJ-4q-a8q">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fqR-o1-wDn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oan-o9-yw9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="KkP-Q8-EKB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nh5-zP-1H8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-224.63768115942031" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zZR-3y-9sp"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
