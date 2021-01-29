@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lXK-Ez-RQL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo LibraryVC-->
+        <scene sceneID="hDQ-Ry-Dbx">
+            <objects>
+                <viewController id="lXK-Ez-RQL" customClass="PhotoLibraryVC" customModule="photoBlender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4I0-2T-tJf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-lV-Itz">
+                                <rect key="frame" x="20" y="64" width="374" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHL-VR-aXo">
+                                <rect key="frame" x="20" y="786" width="374" height="56"/>
+                                <color key="backgroundColor" red="1" green="0.14221451860000001" blue="0.46596913379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="kuR-vz-MHc"/>
+                                </constraints>
+                                <state key="normal" title="Pick Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPhoto:" destination="lXK-Ez-RQL" eventType="touchUpInside" id="iPr-kb-aVL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZoG-RH-WgP"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="cnU-lV-Itz" firstAttribute="top" secondItem="ZoG-RH-WgP" secondAttribute="top" constant="20" id="0Z3-JK-18R"/>
+                            <constraint firstItem="vHL-VR-aXo" firstAttribute="top" secondItem="cnU-lV-Itz" secondAttribute="bottom" constant="20" id="49G-Qc-W0g"/>
+                            <constraint firstItem="vHL-VR-aXo" firstAttribute="leading" secondItem="ZoG-RH-WgP" secondAttribute="leading" constant="20" id="95c-Xn-EaD"/>
+                            <constraint firstItem="ZoG-RH-WgP" firstAttribute="bottom" secondItem="vHL-VR-aXo" secondAttribute="bottom" constant="20" id="QTM-Lg-pcc"/>
+                            <constraint firstItem="ZoG-RH-WgP" firstAttribute="trailing" secondItem="cnU-lV-Itz" secondAttribute="trailing" constant="20" id="SbR-Hi-UJv"/>
+                            <constraint firstItem="ZoG-RH-WgP" firstAttribute="trailing" secondItem="vHL-VR-aXo" secondAttribute="trailing" constant="20" id="Z77-EU-ape"/>
+                            <constraint firstItem="ZoG-RH-WgP" firstAttribute="bottom" secondItem="vHL-VR-aXo" secondAttribute="bottom" constant="20" id="ifl-x5-PKg"/>
+                            <constraint firstItem="cnU-lV-Itz" firstAttribute="leading" secondItem="ZoG-RH-WgP" secondAttribute="leading" constant="20" id="usJ-pW-Yc7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoLibraryView" destination="cnU-lV-Itz" id="ZTF-mN-otk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iM0-5q-17q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
